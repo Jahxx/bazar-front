@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
+    base: './',
     plugins: [react(), tsconfigPaths(), VitePWA({
         devOptions: {
             enabled: true
@@ -50,5 +51,8 @@ export default defineConfig({
             globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
             sourcemap: true,
         }
-    })]
+    })],
+    build: {
+        outDir: 'dist',
+    }
 });

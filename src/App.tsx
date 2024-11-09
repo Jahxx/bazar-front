@@ -38,8 +38,7 @@ const App = () => {
                     </Heading>
                 </HStack>
 
-                {!hasOtherElements && (
-                    <Button
+                {!hasOtherElements && (<Button
                         size={'md'}
                         rounded={'md'}
                         colorPalette={'orange'}
@@ -47,8 +46,17 @@ const App = () => {
                         variant={'subtle'}
                         onClick={handleSearch}>
                         Buscar
+                    </Button>)}
+
+                <Link to="/sales">
+                    <Button
+                        mt={4}
+                        size={"sm"}
+                        variant={'plain'}
+                        colorPalette={'green'}>
+                        Ver ventas registradas
                     </Button>
-                )}
+                </Link>
 
                 <Outlet/>
             </VStack>

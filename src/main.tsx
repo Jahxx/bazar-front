@@ -8,12 +8,16 @@ import App from "@/App.tsx";
 import ErrorPage from "@/error-page.tsx";
 import Items from "@/components/items.tsx";
 import ItemDetail from "@/components/item-detail.tsx";
+import {Toaster} from "@/components/ui/toaster.tsx";
+import Sales from "@/components/sales.tsx";
 
 const router = createBrowserRouter([{
     path: "/", element: <App/>, errorElement: <ErrorPage/>, children: [{
         path: 'items', element: <Items/>
     }, {
         path: 'items/:id', element: <ItemDetail/>,
+    }, {
+        path: "sales", element: <Sales />
     },]
 }], {
     future: {
@@ -28,6 +32,7 @@ const router = createBrowserRouter([{
 createRoot(document.getElementById('root')!).render(<StrictMode>
     <ChakraProvider value={defaultSystem}>
         <ThemeProvider attribute='class' disableTransitionOnChange>
+            <Toaster />
             <RouterProvider future={{v7_startTransition: true}} router={router}/>
         </ThemeProvider>
     </ChakraProvider>

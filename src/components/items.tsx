@@ -14,7 +14,7 @@ const Items = () => {
     const baseUrl = 'https://api-bazar-yphp.onrender.com/api/items';
     const url = searchQuery
         ? `${baseUrl}?q=${searchQuery}&page=${page}&limit=8`
-        : `${baseUrl}?page=${page}&limit=10`
+        : `${baseUrl}?page=${page}&limit=8`
 
     const {products, isLoading, error} = useProducts(url)
 
