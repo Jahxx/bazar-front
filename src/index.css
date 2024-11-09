@@ -1,0 +1,19 @@
+:root {
+  font-family: 'Rubik', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  color: #f9f9ff;
+  background-color: #111417;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  color: #2d2f2f;
+  background-color: #f9f9ff;
+}
